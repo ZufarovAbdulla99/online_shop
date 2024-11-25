@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 4fr;
+    padding: 0.5rem;
+}
+
+.container aside {
+    /* width: 200px; */
+    /* max-width: fit-content; */
+    flex-basis: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    border: 3px solid yellow;
+}
+
+.triangle {
+    content: "asdas";
+    width: 0;
+    height: 0;
+    /* position: absolute; */
+    border: 10px solid transparent;
+    border-top-color: currentColor;
+    align-self: flex-end;
+}
+
+
+.container main .sort {
+    display: flex;
+    align-self: flex-end;
+    /* position: relative; */
+    /* border: 10px solid green; */
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 10px solid blue;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation-name: spin;
+    animation-duration: 1;
+    place-self: center;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.products {
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 4px;
+    /* height: 500px */
+}
+
+.btn {
+    background-color: #008CBA;;
+    width: 100px;
+    height: 60px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+@keyframes spin{
+    to {
+        transform: rotateZ(360deg)
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .filters li {
+        flex-basis: 120px;
+    }
+}
