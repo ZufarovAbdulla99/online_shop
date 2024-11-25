@@ -25,7 +25,7 @@ async function renderProducts() {
       (product) => `
             <div class="card">
             <img src="${product.image}" alt="${product.title}" />
-            <h3><a href=".product.html?id=${product.id}">${
+            <h3><a href="./product.html?id=${product.id}">${
         product.title
       }</a></h3>
             <p>${product.price}</p>
@@ -60,7 +60,7 @@ select.onchange = async function () {
     (product) => `
           <div class="card">
           <img src="${product.image}" alt="${product.title}" />
-          <h3><a href=".product.html?id=${product.id}">${product.title}</a></h3>
+          <h3><a href="./product.html?id=${product.id}">${product.title}</a></h3>
           <p>${product.price}</p>
           <div>
               <span>${"⭐".repeat(Math.round(product.rating.rate))}</span>
@@ -95,7 +95,7 @@ function diplayCategoryItems(items) {
     return `
           <div class="card">
           <img src="${item.image}" alt="${item.title}" />
-          <h3><a href=".product.html?id=${item.id}">${item.title}</a></h3>
+          <h3><a href="./product.html?id=${item.id}">${item.title}</a></h3>
           <p>${item.price}</p>
           <div>
               <span>${"⭐".repeat(Math.round(item.rating.rate))}</span>
